@@ -4,18 +4,18 @@ In some sense project QED is already underway, via a very diverse collection of 
 
 The idea of QED is perhaps 300 years old, but one can imagine tracing it back even 2500 years. We can agree that many groups and individuals have made substantial progress on parts of this project, yet we can ask the question, is there today any project underway which can be reasonably expected to serve as the basis for QED? We believe not, we are afraid not, though we would be delighted to join any such project already underway. One of the reasons that we do not believe there is any such project underway is that we think that there exist a few basic, unsolved technical problems, which we discuss below. A second reason is that few researchers are interested in doing the hard work of checking proofs---probably due to an absence of belief that much of the entire QED edifice will ever be constructed. Another reason is that we are familiar with many automated reasoning projects but see very serious problems in many of them. Here are some of these problems.
 
-| [1](https://www.rbjones.com/rbjpub/logic/qedres03.htm#1)   | Too much code to be trusted              |
-| ---------------------------------------------------------- | ---------------------------------------- |
-| [2](https://www.rbjones.com/rbjpub/logic/qedres03.htm#2)   | Too strong a logic                       |
-| [3](https://www.rbjones.com/rbjpub/logic/qedres03.htm#3)   | Too limited a logic                      |
-| [4](https://www.rbjones.com/rbjpub/logic/qedres03.htm#4)   | Too unintelligible a logic               |
-| [5](https://www.rbjones.com/rbjpub/logic/qedres03.htm#5)   | Too unnatural a syntax                   |
-| [6](https://www.rbjones.com/rbjpub/logic/qedres03.htm#6)   | Parochialism                             |
-| [7](https://www.rbjones.com/rbjpub/logic/qedres03.htm#7)   | Too little extensibility                 |
-| [8](https://www.rbjones.com/rbjpub/logic/qedres03.htm#8)   | Too little heuristic search support      |
-| [9](https://www.rbjones.com/rbjpub/logic/qedres03.htm#9)   | Too little care for rigour               |
-| [10](https://www.rbjones.com/rbjpub/logic/qedres03.htm#10) | Complete absence of inter-operability    |
-| [11](https://www.rbjones.com/rbjpub/logic/qedres03.htm#11) | Too little attention paid to ease of use |
+| 1  | Too much code to be trusted              |
+| -- | ---------------------------------------- |
+| 2  | Too strong a logic                       |
+| 3  | Too limited a logic                      |
+| 4  | Too unintelligible a logic               |
+| 5  | Too unnatural a syntax                   |
+| 6  | Parochialism                             |
+| 7  | Too little extensibility                 |
+| 8  | Too little heuristic search support      |
+| 9  | Too little care for rigour               |
+| 10 | Complete absence of inter-operability    |
+| 11 | Too little attention paid to ease of use |
 
 1. Too much code to be trusted. There have been a number of automated reasoning systems that have checked many theorems of interest, but the amount of code in some of these impressive systems that must be correct if we are to have confidence in the proofs produced by these systems is vastly greater than the few pages of text that we wish to have as the foundation of QED.
 
