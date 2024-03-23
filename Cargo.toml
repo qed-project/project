@@ -1,0 +1,7 @@
+[workspace]
+members = ["crates/qed", "crates/qed-prover", "crates/qed-server"]
+resolver = "2"
+
+[dependencies]
+qed-prover = { path = "crates/qed-prover" }
+qed-server = { path = "crates/qed-server" }
