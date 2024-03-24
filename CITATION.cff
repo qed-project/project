@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: The QED Project
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Luca
+    family-names: Lewin
+    email: contact@lucalewin.dev
+    affiliation: Lund University
+    orcid: 'https://orcid.org/0009-0005-1296-096X'
+repository-code: 'https://github.com/qed-project/project'
+url: 'https://qed.lucalewin.dev'
+abstract: >-
+  The QED project will be a major scientific undertaking
+  requiring the cooperation and effort of hundreds of deep
+  mathematical minds, considerable ingenuity by many
+  computer scientists, and broad support and leadership from
+  research agencies.
+keywords:
+  - math
+  - database
+version: 0.0.1
