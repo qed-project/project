@@ -1,7 +1,23 @@
 [workspace]
-members = ["crates/qed", "crates/qed-prover", "crates/qed-server"]
+members = [
+    "crates/asciimath-rs",
+    "crates/lean-rs",
+    "crates/mathml-rs",
+    "crates/mizar-rs",
+    "crates/openmath-rs",
+    "crates/qed",
+    "crates/qed-formats",
+    "crates/qed-prover",
+    "crates/qed-server"
+]
 resolver = "2"
 
 [workspace.dependencies]
+asciimath-rs = { path = "crates/asciimath-rs" }
+lean-rs = { path = "crates/lean-rs" }
+mathml-rs = { path = "crates/mathml-rs" }
+mizar-rs = { path = "crates/mizar-rs" }
+openmath-rs = { path = "crates/openmath-rs" }
 qed-prover = { path = "crates/qed-prover" }
 qed-server = { path = "crates/qed-server" }
+qed-formats = { path = "crates/qed-formats" }

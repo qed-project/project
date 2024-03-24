@@ -1,3 +1,7 @@
+mod db;
+mod search;
+mod server;
+
 fn main() {
-    qed_server::start();
+    server::start();
 }
