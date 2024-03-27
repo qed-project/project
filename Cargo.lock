@@ -583,13 +583,13 @@ dependencies = [
 name = "qed"
 version = "0.1.0"
 dependencies = [
- "qed-formats",
- "qed-prover",
- "qed-server",
+ "qed_formats",
+ "qed_prover",
+ "qed_server",
 ]
 
 [[package]]
-name = "qed-formats"
+name = "qed_formats"
 version = "0.0.0"
 dependencies = [
  "asciimath-rs",
@@ -598,7 +598,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "qed-prover"
+name = "qed_prover"
 version = "0.1.0"
 dependencies = [
  "lean-rs",
@@ -606,7 +606,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "qed-server"
+name = "qed_server"
 version = "0.1.0"
 dependencies = [
  "askama",

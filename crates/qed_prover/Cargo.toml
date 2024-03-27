@@ -1,12 +1,11 @@
 [package]
-name = "qed-formats"
-version = "0.0.0"
+name = "qed_prover"
+version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-asciimath-rs = { workspace = true }
-mathml-rs = { workspace = true }
-openmath-rs = { workspace = true }
+lean-rs = { workspace = true }
+mizar-rs = { workspace = true }

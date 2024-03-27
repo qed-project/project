@@ -6,9 +6,9 @@ members = [
     "crates/mizar-rs",
     "crates/openmath-rs",
     "crates/qed",
-    "crates/qed-formats",
-    "crates/qed-prover",
-    "crates/qed-server"
+    "crates/qed_formats",
+    "crates/qed_prover",
+    "crates/qed_server"
 ]
 resolver = "2"
 
@@ -18,6 +18,6 @@ lean-rs = { path = "crates/lean-rs" }
 mathml-rs = { path = "crates/mathml-rs" }
 mizar-rs = { path = "crates/mizar-rs" }
 openmath-rs = { path = "crates/openmath-rs" }
-qed-prover = { path = "crates/qed-prover" }
-qed-server = { path = "crates/qed-server" }
-qed-formats = { path = "crates/qed-formats" }
+qed_prover = { path = "crates/qed_prover" }
+qed_server = { path = "crates/qed_server" }
+qed_formats = { path = "crates/qed_formats" }

@@ -7,6 +7,6 @@ license = "MIT OR Apache-2.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-qed-prover = { workspace = true }
-qed-server = { workspace = true }
-qed-formats = { workspace = true }
+qed_prover = { workspace = true }
+qed_server = { workspace = true }
+qed_formats = { workspace = true }
