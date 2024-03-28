@@ -2,7 +2,11 @@
 name = "openmath-rs"
 version = "0.0.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Luca Lewin <contact@lucalewin.dev>"]
+description = "openmath standard parser"
+license = "MIT OR Apache-2.0"
+homepage = { workspace = true }
+documentation = { workspace = true }
+repository = { workspace = true }
 
 [dependencies]

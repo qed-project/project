@@ -12,6 +12,11 @@ members = [
 ]
 resolver = "2"
 
+[workspace.package]
+homepage = "https://qed.lucalewin.dev"
+documentation = "https://lucalewin.dev/projects/qed"
+repository = "https://github.com/qed-project/project"
+
 [workspace.dependencies]
 asciimath-rs = { path = "crates/asciimath-rs" }
 lean-rs = { path = "crates/lean-rs" }
