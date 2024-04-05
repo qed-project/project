@@ -1,3 +1,1 @@
-pub fn start() {
-    
-}
+pub fn start() {}
