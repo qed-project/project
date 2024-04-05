@@ -3,21 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %}</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    {# <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> #}
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>{% block title %}{% endblock %} - The QED Project</title>
 </head>
 <body>
     <header>
-        {% block header %}
-        
-        {% endblock header %}
+        <h1>The QED Project</h1>
+        <ul>
+            {# <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/about/people">People</a></li> #}
+        </ul>
+        <ul>
+            <li><a href="/register" class="btn">Sign up</a></li>
+            <li><a href="/login" class="btn secondary">Sign in</a></li>
+        </ul>
     </header>
     <main>
-        {%- block content -%}{%- endblock title -%}
+        {% block content -%}{%- endblock %}
     </main>
     <footer>
-        {% block footer %}
-        
-        {% endblock footer %}
+        <div class="categories">
+            <div class="category">
+                <a href="/about" class="title">About</a>
+                <a href="/about/manifesto">Manifesto</a>
+                <a href="/about/foundation">Foundation</a>
+                <a href="/about/contributing">Contributing</a>
+                <a href="/about/contact">Contact</a>
+            </div>
+            <div class="category">
+                <a href="/community" class="title">Community</a>
+                <a href="/community/forum">Forum</a>
+                <a href="/community/people">People</a>
+            </div>
+            <div class="category">
+                <a href="/research" class="title">Research</a>
+                <a href="/research/articles">Articles</a>
+                <a href="/blog">Blog</a>
+            </div>
+            <div class="category">
+                <a href="/legal" class="title">Legal</a>
+                <a href="/legal/cookies">Cookie Policy</a>
+                <a href="/legal/terms">Terms of Service</a>
+                <a href="/legal/privacy">Privacy Policy</a>
+                <a href="/legal/security">Security Policy</a>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2024 <a href="/">The QED Project</a>. <br> All rights reserved.
+        </div>
     </footer>
 </body>
 </html>
