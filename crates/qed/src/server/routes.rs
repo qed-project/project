@@ -1,4 +1,5 @@
 use axum::{routing::get, Router};
+use hyper::StatusCode;
 use tera::Context;
 use tower_http::services::ServeDir;
 
@@ -24,8 +25,13 @@ pub fn build_routes() -> Router {
         .route("/legal/security", get(super::legal::security_policy_page))
         // static files
         .nest_service("/assets", ServeDir::new("assets"))
+        .fallback(fallback_handler)
 }
 
 async fn homepage_handler() -> Template {
     Template::render("index.html", Context::new())
+}
+
+async fn fallback_handler() -> (StatusCode, Template) {
+    (StatusCode::NOT_FOUND, Template::render("error/404.html", Context::new()))
 }
