@@ -1,0 +1,39 @@
+@import "variables";
+
+.search-wrapper {
+    margin: 4em 0;
+    text-align: center;
+
+    h1 {
+        margin: 8px 0;
+    }
+
+    form {
+        input {
+            padding: 10px 12px;
+            width: 100%;
+            max-width: $break-normal;
+            outline: none;
+            border-radius: $radius-full;
+            border: 1px solid $color-border;
+            
+            &:focus {
+                // padding: 9px 11px;
+                border: 1px solid $color-primary;
+                outline: 1px solid $color-primary;
+            }
+        }
+    }
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: $break-normal) {
+    .search-wrapper {
+        margin: 1em 0 2em 0;
+    }
+}
