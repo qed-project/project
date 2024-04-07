@@ -2,4 +2,27 @@
 {% block title -%} Search {%- endblock %}
 {% block content %}
 <h1>Search</h1>
+<div class="search-wrapper">
+    <form action="/search" method="get">
+        <input
+            type="text"
+            name="query"
+            id=""
+            placeholder="Search for mathematical theorems, definitions or anything else math related"
+            value="{{ query }}">
+    </form>
+</div>
+{# <p>Query: {{ query }}</p> #}
+<div class="search-results">
+    {% if results %}
+        {% for result in results %}
+            <div class="card">
+                TODO: display information of search result
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found!</p>
+        <p>Try modifying your search query.</p>
+    {% endif %}
+</div>
 {% endblock %}
