@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="error">
+    <h1>{{ title|uppercase }}</h1>
+    {% if subtitle %}
+        <h3>{{ subtitle }}</h3>
+    {% endif %}
+    <p>{{ message }}</p>
+</div>
+{% endblock %}
