@@ -937,6 +937,7 @@ dependencies = [
  "hyper-util",
  "lazy_static",
  "path-slash",
+ "serde",
  "tera",
  "thiserror",
  "tokio",
