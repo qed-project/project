@@ -1,0 +1,32 @@
+@import "../variables";
+
+button, .btn {
+    cursor: pointer;
+    // padding: 10px 16px;
+    padding: 8px 12px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #fff;
+    background-color: $color-primary;
+    
+    &.secondary {
+        color: $color-primary;
+        background-color: transparent;
+        border: 1px solid $color-primary;
+    }
+}
+
+// .btn {
+//     text-decoration: none;
+//     border-radius: 6px;
+//     background-color: $color-primary;
+//     color: $color-background;
+//     padding: 6px 10px;
+
+//     &.secondary {
+//         background-color: inherit;
+//         color: inherit;
+//     }
+// }
