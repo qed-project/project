@@ -1,0 +1,2 @@
+rule add_inverse { a + (-a) = (-a) + a = 0}
+rule mul_inverse { a^(-1) * a = a * a^(-1) = 1}

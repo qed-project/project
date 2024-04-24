@@ -1,0 +1,7 @@
+rule add_associative { (x + y) + z = x + (y + z) }
+rule add_commutative { x + y = y + x }
+
+rule mul_commutative { x * y = y * x }
+rule mul_associative { (x * y) * z = x * (y * z) }
+
+rule distribution { x * (y + z) = x * y + x * z }

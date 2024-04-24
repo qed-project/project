@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "crates/asciimath-rs",
+    "crates/symbol",
     "crates/lean-rs",
     "crates/mathml-rs",
     "crates/mizar-rs",
