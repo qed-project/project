@@ -16,7 +16,10 @@ pub fn build_routes() -> Router {
         .route("/about/people", get(super::about::people_page))
         // search
         .route("/search", get(super::search::search_handler))
-        .route("/search/advanced", get(super::search::advanced_search_handler))
+        .route(
+            "/search/advanced",
+            get(super::search::advanced_search_handler),
+        )
         // legal
         .route("/legal", get(super::legal::legal_docs_page))
         .route("/legal/cookies", get(super::legal::cookie_policy_page))
@@ -33,5 +36,8 @@ async fn homepage_handler() -> Template {
 }
 
 async fn fallback_handler() -> (StatusCode, Template) {
-    (StatusCode::NOT_FOUND, Template::render("error/404.html", Context::new()))
+    (
+        StatusCode::NOT_FOUND,
+        Template::render("error/404.html", Context::new()),
+    )
 }

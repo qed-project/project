@@ -7,14 +7,14 @@ use tower_http::timeout::TimeoutLayer;
 use tower_http::trace::TraceLayer;
 use tracing::info;
 
-mod auth;
-mod routes;
-mod templates;
-mod search;
-mod legal;
 mod about;
+mod auth;
+mod legal;
+mod routes;
+mod search;
+mod templates;
 
-pub async fn run()  {
+pub async fn run() {
     let addr = SocketAddr::from(([0, 0, 0, 0], 8000));
 
     info!("Starting web server on `{}:{}`", addr.ip(), addr.port());
