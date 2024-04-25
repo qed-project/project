@@ -10,7 +10,8 @@ impl std::fmt::Display for Expression {
             Expression::Product(lhs, rhs) => write!(f, "({}*{})", lhs, rhs),
             Expression::Quotient(lhs, rhs) => write!(f, "({}/{})", lhs, rhs),
             Expression::Equality(lhs, rhs) => write!(f, "{}={}", lhs, rhs),
-            _ => todo!("debug: {:?}", self)
+            Expression::Negation(expr) => write!(f, "(-{})", expr),
+            _ => todo!("expression display: {:?}", self)
         }
     }
 }

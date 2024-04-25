@@ -16,7 +16,7 @@ pub type Error = chumsky::error::Simple<char, Range<usize>>;
 /// expressions as parts of a more complex input language. If you simply want
 /// to turn strings into expressions, use `"a + b".parse::<Expression>()`.
 #[allow(clippy::let_and_return)]
-pub fn parser() -> impl Parser<char, Expression, Error = Error> {
+pub fn expression_parser() -> impl Parser<char, Expression, Error = Error> {
     recursive(|expression| {
         let identifier = text::ident()
             // .map(|identifier: String| match identifier.as_str() {
@@ -223,7 +223,7 @@ impl FromStr for Expression {
     type Err = Vec<Error>;
 
     fn from_str(string: &str) -> Result<Self, Self::Err> {
-        parser().then_ignore(end()).parse(string)
+        expression_parser().then_ignore(end()).parse(string)
     }
 }
 

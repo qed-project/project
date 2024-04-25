@@ -1,6 +1,6 @@
 pub type Integer = num::bigint::BigInt;
 pub type Rational = num::rational::Ratio<Integer>;
-pub type Complex = num::complex::Complex<Integer>;
+pub type Complex = num::complex::Complex<Rational>;
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub enum Expression {
@@ -81,8 +81,13 @@ impl std::ops::Div for Expression {
 }
 
 impl Expression {
-    pub fn typ(&self) -> ExpressionType {
-        todo!()
+    pub fn kind(&self) -> ExpressionKind {
+        match self {
+            Self::Integer(i) => ExpressionKind::Number(Rational::from_integer(i.clone()).into()),
+            Self::RationalNumber(r) => ExpressionKind::Number(r.into()),
+            Self::ComplexNumber(c) => ExpressionKind::Number(c.clone()),
+            _ => ExpressionKind::Unknown,
+        }
     }
 
     pub fn precedence(&self) -> usize {
@@ -94,11 +99,10 @@ impl Expression {
     }
 }
 
-pub enum ExpressionType {
-    Number,
-    Logical,
-    Function,
-    Other,
+pub enum ExpressionKind {
+    Number(Complex),
+    Arithmetic,
+    Unknown
 }
 
 pub enum Associativity {

@@ -1,7 +1,18 @@
 rule add_associative { (x + y) + z = x + (y + z) }
 rule add_commutative { x + y = y + x }
+rule add_identity { x + 0 = x }
+rule add_inverse { x + (-x) = 0 }
 
-rule mul_commutative { x * y = y * x }
+rule sub_definition { x + (-y) = x - y }
+
 rule mul_associative { (x * y) * z = x * (y * z) }
+rule mul_commutative { x * y = y * x }
+rule mul_identity { x * 1 = x}
+rule mul_inverse { x * x^(-1) = 1 }
+
+rule div_definition { x * y^(-1) = x / y }
 
 rule distribution { x * (y + z) = x * y + x * z }
+rule distribution_reversed { (x + y) * z = x * z + y * z }
+
+rule double_negation { -(-x) = x }

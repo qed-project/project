@@ -42,13 +42,13 @@ impl Signature {
             _ => todo!("{expr}")
         }.to_string();
 
-        let depth = get_depth(&expr);
+        let depth = get_max_depth(&expr);
 
         Self { depth, root, expr }
     }
 }
 
-fn get_depth(expr: &Expression) -> usize {
+fn get_max_depth(expr: &Expression) -> usize {
     match expr {
         Expression::Integer(_)
         | Expression::RationalNumber(_)
@@ -59,8 +59,8 @@ fn get_depth(expr: &Expression) -> usize {
         | Expression::Product(lhs, rhs)
         | Expression::Quotient(lhs, rhs)
         | Expression::Equality(lhs, rhs) => {
-            let lhs_depth = get_depth(lhs);
-            let rhs_depth = get_depth(rhs);
+            let lhs_depth = get_max_depth(lhs);
+            let rhs_depth = get_max_depth(rhs);
 
             lhs_depth.max(rhs_depth) + 1
         }
