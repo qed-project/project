@@ -16,3 +16,10 @@ rule distribution { x * (y + z) = x * y + x * z }
 rule distribution_reversed { (x + y) * z = x * z + y * z }
 
 rule double_negation { -(-x) = x }
+
+rule binomial1 { (a + b) * (a + b) = a^2 + 2*a*b + b^2 }
+rule binomial2 { (a - b) * (a - b) = a^2 - 2*a*b + b^2 }
+rule binomial3 { (a + b) * (a - b) = a^2 - b^2 }
+
+rule exponent_add { a^n * a^m = a^(n+m) }
+rule exponent_sub { a^n / a^m = a^(n-m) }
