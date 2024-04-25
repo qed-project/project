@@ -11,6 +11,7 @@ impl std::fmt::Display for Expression {
             Expression::Quotient(lhs, rhs) => write!(f, "({}/{})", lhs, rhs),
             Expression::Equality(lhs, rhs) => write!(f, "{}={}", lhs, rhs),
             Expression::Negation(expr) => write!(f, "(-{})", expr),
+            Expression::Power(base, exp) => write!(f, "{}^{}", base, exp),
             _ => todo!("expression display: {:?}", self)
         }
     }

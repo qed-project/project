@@ -42,29 +42,8 @@ impl Signature {
             _ => todo!("{expr}")
         }.to_string();
 
-        let depth = get_max_depth(&expr);
+        let depth = 1;//get_max_depth(&expr);
 
         Self { depth, root, expr }
-    }
-}
-
-fn get_max_depth(expr: &Expression) -> usize {
-    match expr {
-        Expression::Integer(_)
-        | Expression::RationalNumber(_)
-        | Expression::ComplexNumber(_)
-        | Expression::Variable(_) => 1,
-        Expression::Sum(lhs, rhs)
-        | Expression::Difference(lhs, rhs)
-        | Expression::Product(lhs, rhs)
-        | Expression::Quotient(lhs, rhs)
-        | Expression::Equality(lhs, rhs) => {
-            let lhs_depth = get_max_depth(lhs);
-            let rhs_depth = get_max_depth(rhs);
-
-            lhs_depth.max(rhs_depth) + 1
-        }
-
-        _ => todo!("get_depth: {expr}")
     }
 }

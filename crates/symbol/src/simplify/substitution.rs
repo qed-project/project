@@ -33,6 +33,11 @@ impl Expression {
                 let replaced_expr = expr.substitute_variables(var_table);
                 Self::Negation(Box::new(replaced_expr))
             }
+            Self::Power(base, exp) => {
+                let replaced_base = base.substitute_variables(var_table);
+                let replaced_exp = exp.substitute_variables(var_table);
+                Self::Power(Box::new(replaced_base), Box::new(replaced_exp))
+            }
             Self::Variable(var) => {
                 var_table.get(&var).unwrap().clone()
             }
