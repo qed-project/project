@@ -1,3 +1,4 @@
+
 use crate::expr::Expression;
 
 /// Signature of an expression for easier and
@@ -41,6 +42,29 @@ impl Signature {
             _ => todo!("{expr}")
         }.to_string();
 
-        Self { depth: 1, root, expr }
+        let depth = get_depth(&expr);
+
+        Self { depth, root, expr }
+    }
+}
+
+fn get_depth(expr: &Expression) -> usize {
+    match expr {
+        Expression::Integer(_)
+        | Expression::RationalNumber(_)
+        | Expression::ComplexNumber(_)
+        | Expression::Variable(_) => 1,
+        Expression::Sum(lhs, rhs)
+        | Expression::Difference(lhs, rhs)
+        | Expression::Product(lhs, rhs)
+        | Expression::Quotient(lhs, rhs)
+        | Expression::Equality(lhs, rhs) => {
+            let lhs_depth = get_depth(lhs);
+            let rhs_depth = get_depth(rhs);
+
+            lhs_depth.max(rhs_depth) + 1
+        }
+
+        _ => todo!("get_depth: {expr}")
     }
 }

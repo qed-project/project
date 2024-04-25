@@ -10,18 +10,6 @@ pub struct Rule {
     pub expr: Expression,
 }
 
-impl Rule {
-    pub fn apply(&self, expr: &Expression) -> Expression {
-        let Expression::Equality(ref lhs, ref rhs) = self.expr else {
-            panic!("right now we expect the rule to be an equality (<expr>=<expr>)")
-        };
-
-        
-
-        todo!()
-    }
-}
-
 pub fn load_rules() -> std::io::Result<Vec<Rule>> {
     let content = std::fs::read_to_string("./rules/real.rule")?;
 
